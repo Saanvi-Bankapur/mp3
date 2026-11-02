@@ -185,7 +185,7 @@ module.exports = function (router) {
             { $set: { assignedUser: '', assignedUserName: 'unassigned' } }
         );
 
-        h.send(res, 200, 'User deleted', user);
+        res.status(204).end();
     }));
 
     return router;

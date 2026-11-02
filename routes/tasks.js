@@ -193,7 +193,7 @@ module.exports = function (router) {
             { $pull: { pendingTasks: String(task._id) } }
         );
 
-        h.send(res, 200, 'Task deleted', task);
+        res.status(204).end();
     }));
 
     return router;
